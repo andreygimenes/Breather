@@ -15,6 +15,7 @@
 				<TrayIcon.Menu>
 					<NativeMenu>
 						<NativeMenuItem Header="Settings" Command="{Binding ShowSettingsCommand}"></NativeMenuItem>
+						<NativeMenuItemSeparator />
 						<NativeMenuItem Header="Close" Command="{Binding CloseCommand}"></NativeMenuItem>
 					</NativeMenu>
 				</TrayIcon.Menu>
