@@ -1,17 +1,17 @@
 ﻿using System.Reactive;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Threading;
 using ReactiveUI;
+using Breather.Desktop.Windows;
 
-namespace Breather.Desktop;
+namespace Breather.Desktop.Models;
 
 public class AppViewModel : ReactiveObject
 {
     public ReactiveCommand<Unit, Unit> ShowSettingsCommand { get; }
     public ReactiveCommand<Unit, Unit> CloseCommand { get; }
 
-    private SettingsWindow settingsWindow { get; set; }
+    private SettingsWindow? SettingsWindow { get; set; }
 
     public AppViewModel()
     {
@@ -22,16 +22,16 @@ public class AppViewModel : ReactiveObject
     #region Commands
     private void ShowSettings()
     {
-        if (settingsWindow == null)
+        if (SettingsWindow == null)
         {
-            settingsWindow = new SettingsWindow();
-            settingsWindow.Closing += (s, e) =>
+            SettingsWindow = new SettingsWindow();
+            SettingsWindow.Closing += (s, e) =>
             {
-                settingsWindow = null;
+                SettingsWindow = null;
             };
         }
-        settingsWindow.Hide();
-        settingsWindow.Show();
+        SettingsWindow.Hide();
+        SettingsWindow.Show();
     }
 
     private void Close()

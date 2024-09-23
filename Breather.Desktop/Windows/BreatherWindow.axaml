@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="using:Breather.Desktop.Models"
+        x:Class="Breather.Desktop.Windows.BreatherWindow" x:DataType="local:BreatherViewModel"
+        mc:Ignorable="d" d:DesignWidth="100" d:DesignHeight="100"
+        Title="Breather" Width="{Binding Width}" Height="{Binding Height}" CanResize="False"
+		ExtendClientAreaToDecorationsHint="False"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="-1"
+		TransparencyLevelHint="Transparent"
+        Background="Transparent"
+		ShowInTaskbar="False"
+        SystemDecorations="None">
+	<Window.DataContext>
+		<local:BreatherViewModel />
+	</Window.DataContext>
+	<StackPanel PointerMoved="InputElement_OnPointerMoved" PointerPressed="InputElement_OnPointerPressed" PointerReleased="InputElement_OnPointerReleased">
+		<Image Source="{Binding Frame}"/>
+	</StackPanel>
+</Window>

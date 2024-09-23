@@ -8,9 +8,11 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Assets\Capsules\breather_0.zip" />
     <None Remove="Assets\logo.ico" />
   </ItemGroup>
   <ItemGroup>
+    <AvaloniaResource Include="Assets\Capsules\breather_0.zip" />
     <AvaloniaResource Include="Assets\logo.ico" />
   </ItemGroup>
 
@@ -25,10 +27,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="BreatherWindow.axaml.cs">
+    <Compile Update="Windows\BreatherWindow.axaml.cs">
       <DependentUpon>BreatherWindow.axaml</DependentUpon>
     </Compile>
-    <Compile Update="SettingsWindow.axaml.cs">
+    <Compile Update="Windows\SettingsWindow.axaml.cs">
       <DependentUpon>SettingsWindow.axaml</DependentUpon>
     </Compile>
   </ItemGroup>
