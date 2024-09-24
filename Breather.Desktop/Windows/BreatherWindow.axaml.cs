@@ -15,6 +15,7 @@ public partial class BreatherWindow : Window
             e.Cancel = true;
         };
         Topmost = true;
+        ShowActivated = false;
     }
 
     private bool _mouseDownForWindowMoving = false;
