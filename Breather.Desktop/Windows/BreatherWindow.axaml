@@ -5,7 +5,7 @@
 		xmlns:local="using:Breather.Desktop.Models"
         x:Class="Breather.Desktop.Windows.BreatherWindow" x:DataType="local:BreatherViewModel"
         mc:Ignorable="d" d:DesignWidth="100" d:DesignHeight="100"
-        Title="Breather" Width="{Binding Settings.Width}" Height="{Binding Settings.Height}" CanResize="False"
+        Title="Breather" Width="{Binding Width}" Height="{Binding Height}" CanResize="False"
 		ExtendClientAreaToDecorationsHint="False"
         ExtendClientAreaChromeHints="NoChrome"
         ExtendClientAreaTitleBarHeightHint="-1"
@@ -16,7 +16,5 @@
 	<Window.DataContext>
 		<local:BreatherViewModel />
 	</Window.DataContext>
-	<StackPanel PointerMoved="InputElement_OnPointerMoved" PointerPressed="InputElement_OnPointerPressed" PointerReleased="InputElement_OnPointerReleased">
-		<Image Source="{Binding Frame}"/>
-	</StackPanel>
+	<Image Source="{Binding Frame}" Width="{Binding Width}" Height="{Binding Height}" PointerMoved="Display_OnPointerMoved" PointerPressed="Display_OnPointerPressed" PointerReleased="Display_OnPointerReleased"/>
 </Window>

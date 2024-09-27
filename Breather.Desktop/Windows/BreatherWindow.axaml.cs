@@ -21,7 +21,7 @@ public partial class BreatherWindow : Window
     private bool _mouseDownForWindowMoving = false;
     private PointerPoint _originalPoint;
 
-    private void InputElement_OnPointerMoved(object? sender, PointerEventArgs e)
+    private void Display_OnPointerMoved(object? sender, PointerEventArgs e)
     {
         if (!_mouseDownForWindowMoving) return;
 
@@ -30,7 +30,7 @@ public partial class BreatherWindow : Window
             Position.Y + (int)(currentPoint.Position.Y - _originalPoint.Position.Y));
     }
 
-    private void InputElement_OnPointerPressed(object? sender, PointerPressedEventArgs e)
+    private void Display_OnPointerPressed(object? sender, PointerPressedEventArgs e)
     {
         if (WindowState == WindowState.Maximized || WindowState == WindowState.FullScreen) return;
 
@@ -38,7 +38,7 @@ public partial class BreatherWindow : Window
         _originalPoint = e.GetCurrentPoint(this);
     }
 
-    private void InputElement_OnPointerReleased(object? sender, PointerReleasedEventArgs e)
+    private void Display_OnPointerReleased(object? sender, PointerReleasedEventArgs e)
     {
         _mouseDownForWindowMoving = false;
     }
