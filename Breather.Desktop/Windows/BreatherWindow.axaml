@@ -5,14 +5,9 @@
 		xmlns:local="using:Breather.Desktop.Models"
         x:Class="Breather.Desktop.Windows.BreatherWindow" x:DataType="local:BreatherViewModel"
         mc:Ignorable="d" d:DesignWidth="100" d:DesignHeight="100"
-        Title="Breather" Width="{Binding Width}" Height="{Binding Height}" CanResize="False"
-		ExtendClientAreaToDecorationsHint="False"
-        ExtendClientAreaChromeHints="NoChrome"
-        ExtendClientAreaTitleBarHeightHint="-1"
-		TransparencyLevelHint="Transparent"
-        Background="Transparent"
-		ShowInTaskbar="False"
-        SystemDecorations="None">
+        Title="Breather" Icon="/Assets/logo.ico" Width="{Binding Width}" Height="{Binding Height}" CanResize="False"
+		ExtendClientAreaToDecorationsHint="False" ExtendClientAreaChromeHints="NoChrome" ExtendClientAreaTitleBarHeightHint="-1"
+		TransparencyLevelHint="Transparent" Background="Transparent" ShowInTaskbar="False" SystemDecorations="None">
 	<Window.DataContext>
 		<local:BreatherViewModel />
 	</Window.DataContext>

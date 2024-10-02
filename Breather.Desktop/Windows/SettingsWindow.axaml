@@ -5,7 +5,7 @@
         mc:Ignorable="d" d:DesignWidth="240" d:DesignHeight="320" Width="240" Height="320"
 		xmlns:local="using:Breather.Desktop.Models"
         x:Class="Breather.Desktop.Windows.SettingsWindow" x:DataType="local:SettingsViewModel"
-        Title="Settings">
+        Title="Settings" Icon="/Assets/logo.ico">
 	<Window.DataContext>
 		<local:SettingsViewModel />
 	</Window.DataContext>
